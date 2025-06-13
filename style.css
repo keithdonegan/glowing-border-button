@@ -8,8 +8,121 @@ html {
 }
 body {
     display: flex;
-    border: 1px solid red;
+    background: #0a0a0a;
     height: 100%;
     align-items: center;
     justify-content: center;
+    font-family: arial;
 }
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+        /* Button container */
+        .button-container {
+            position: relative;
+        }
+        .button-container-yup {
+            position: absolute;
+            display: inline-block;
+            border-radius: 12px;
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            padding: 1px;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            /* -webkit-mask-composite: xor; */
+            mask-composite: exclude;
+            left: -1px;
+            top: -1px;
+            z-index: 133;
+        }
+
+        /* The rotating gradient background - BEHIND the button */
+        .rotating-background {
+            animation: rotate 13s linear infinite;
+            background: conic-gradient(from 0deg, #fff, transparent 0%, #fff 20%, #fff, transparent 20%);
+            position: absolute;
+            top: -86px;
+            left: 0%;
+            z-index: 31;
+            border-radius: 12px;
+            width: 225px;
+            height: 225px;
+        }
+
+        
+
+
+        /* The actual button - covers most of the gradient */
+        .animated-button {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            margin: 0px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .animated-button.dark-version {
+            background: linear-gradient(135deg, #1e1e2e, #2d2d3a);
+        }
+
+        .button-container:hover .animated-button {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+        }
+
+       
+
+        /* Demo container */
+        .demo-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .demo-title {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .demo-description {
+            color: #888;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .button-group {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        .blah {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
