@@ -30,7 +30,7 @@ body {
         font-size: 26px;
     }
 
-    .feh-shiny-button {
+    /* .feh-shiny-button {
         position: relative;
         padding: 20px 32px;
         border-radius: 12px;
@@ -79,4 +79,4 @@ body {
     100% { 
         transform: rotate(360deg) translate(-50%, -50%);
     }
-}
+} */
