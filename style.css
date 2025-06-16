@@ -40,7 +40,6 @@ body {
         text-decoration: none;
         background: #1F1F1F;
         transition: all 0.3s ease;
-        /* z-index: 1; */
     }
     .feh-shiny-button:hover {
         background: #333;
@@ -58,7 +57,7 @@ body {
         mask-composite: exclude;
     }
     
-    /* .feh-border-glow {
+    .feh-border-glow {
         animation: rotateShine 3s linear infinite;
         background: conic-gradient(from 0deg, transparent 0%, #fff 10%, #000, transparent 20%);
         position: absolute;
@@ -68,8 +67,8 @@ body {
         height: 500px;
         transform: translate(-50%, -50%);
         transform-origin: 0 0;
-        z-index: 1;
-    } */
+        
+    }
 
 @keyframes rotateShine {
     0% { 
