@@ -23,7 +23,6 @@ body {
         font-size: 52px;
         font-weight: 300;
     }
-    
     p {
         color: #878787;
         margin-bottom: 35px;
@@ -82,4 +81,4 @@ body {
     100% { 
         transform: rotate(360deg) translate(-50%, -50%);
     }
-} 
+}
